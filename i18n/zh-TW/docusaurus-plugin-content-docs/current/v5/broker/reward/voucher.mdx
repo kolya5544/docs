@@ -17,7 +17,7 @@ POST `/v5/broker/award/info`
 |:----- |:-----|----- |
 |id |string |代金券ID|
 |coin |string |幣種|
-|amountUnit |string |計價單位<li><code>AWARD_AMOUNT_UNIT_USD</code></li><li><code>AWARD_AMOUNT_UNIT_COIN</code></li>|
+|amountUnit |string |計價單位<ul><li><code>AWARD_AMOUNT_UNIT_USD</code></li><li><code>AWARD_AMOUNT_UNIT_COIN</code></li></ul>|
 |productLine |string |業務線|
 |subProductLine |string |子業務線|
 |totalAmount |Object |代金券總金額|
@@ -47,7 +47,15 @@ Content-Length: 22
 <TabItem value="python" label="Python">
 
 ```python
-
+from pybit.unified_trading import HTTP
+session = HTTP(
+    testnet=True,
+    api_key="xxxxxxxxxxxxxxxxxx",
+    api_secret="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+)
+print(session.get_voucher_spec(
+    id="80209",
+))
 ```
 
 </TabItem>

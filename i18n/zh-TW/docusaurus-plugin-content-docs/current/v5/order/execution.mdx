@@ -22,7 +22,8 @@ GET `/v5/execution/list`
 |symbol |false |string |合約名稱 |
 |orderId |false |string |訂單Id |
 |orderLinkId |false |string |用戶自定義訂單id|
-|baseCoin |false |string |交易幣種|
+|baseCoin |false |string |交易幣種. 對於期權來說，默认是BTC|
+|settleCoin |false |string |结算幣種. 只支持 `linear`, `inverse`,`option`|
 |startTime |false |integer |開始時間戳 (毫秒) <ul><li>startTime 和 endTime都不傳入, 則默認返回最近7天的數據</li><li>startTime 和 endTime都傳入的話, 則確保endTime - startTime &le; 7天</li><li>若只傳startTime, 則查詢startTime和startTime+7天的數據</li><li>若只傳endTime, 則查詢endTime-7天和endTime的數據</li></ul>|
 |endTime |false |integer |結束時間戳 (毫秒) |
 |[execType](../enum#exectype) |false |string |執行類型|
@@ -41,7 +42,7 @@ GET `/v5/execution/list`
 |> orderPrice |string |訂單價格 |
 |> orderQty |string |訂單數量 |
 |> leavesQty |string |剩餘委託未成交數量|
-|> [createType](../enum#createtype) |string |訂單創建類型<li>現貨、期權不返回該字段</li> |
+|> [createType](../enum#createtype) |string |訂單創建類型<li>現貨不返回該字段</li> |
 |> [orderType](../enum#ordertype) |string |訂單類型. 市價單：`Market`,限價單：`Limit` |
 |> [stopOrderType](../enum#stopordertype) |string |条件单的订单类型。如果该订单不是条件单，则可能返回`""`或者`UNKNOWN`.  |
 |> execFee |string |交易手續費. 您可以從[這裡](../enum#現貨交易手續費幣種說明)了解現貨手續費幣種信息|

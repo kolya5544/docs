@@ -126,10 +126,10 @@ _終態_
 * `FOK`&emsp;完全成交或取消
 * <a href="https://www.bybit.com/zh-TW/help-center/bybitHC_Article?language=zh_TW&id=000001051">PostOnly</a>&emsp;被動委託
 * <a href="https://www.bybit.com/en/help-center/article/Retail-Price-Improvement-RPI-Order">RPI(Retail Price Improvement)</a>&emsp;特性:<ul><li><b>獨家匹配</b>: 僅匹配非演算法用戶；不執行來自 Open API 的訂單.</li>
-<li><b>Post-Only 機制</b>: 充當掛單，增加流動性</li>
-<li><b>較低優先順序</b>: 在相同價格水準的非 RPI 訂單之後執行</li>
-<li><b>有限訪問</b>: 最初僅針對部分幣對的選定做市商.</li>
-<li><b>訂單簿更新</b>: 從 API 中排除，但顯示在 GUI 上.</li></ul>
+<ul><li><b>Post-Only 機制</b>: 充當掛單，增加流動性</li></ul>
+<ul><li><b>較低優先順序</b>: 在相同價格水準的非 RPI 訂單之後執行</li></ul>
+<ul><li><b>有限訪問</b>: 最初僅針對部分幣對的選定做市商.</li></ul>
+<ul><li><b>訂單簿更新</b>: 從 API 中排除，但顯示在 GUI 上.</li></ul></ul>
 
 ### createType
 * `CreateByUser`
@@ -469,6 +469,7 @@ _期權:_
 * `PLATFORM_TOKEN_MNT_LIQRETURNEDMNT`&emsp;MNT返回
 * `BORROW`&emsp;手工借幣和自動借幣
 * `REPAY`&emsp;手工還幣和自動還幣
+* `CONVERT`&emsp;貨幣兌換還款
 * `INTEREST_REFUND`&emsp;固定利率利息
 * `EU_FIAT_HEDGE_TRADING_TRADER_IN`&emsp;歐盟站法貨幣對沖交易流入
 * `EU_FIAT_HEDGE_TRADING_TRADER_OUT`&emsp;歐盟站法貨幣對沖交易資金流出
@@ -484,6 +485,13 @@ _期權:_
 * `DBS_CASH_IN_TR`
 * `CUSTODY_CASH_RECOVER_TR`
 * `ALPHA_SMALL_TOKEN_REFUND`
+* `TWAP_BUDGET_AIRDROP`
+* `TWAP_BUDGET_RECALL`
+* `FLOATING_TO_FIXED_BORROW`
+* `FLOATING_TO_FIXED_REPAY`
+* `IDN_CONVERT_IN`
+* `IDN_CONVERT_OUT`
+
 
 
 ### type(contract-translog)

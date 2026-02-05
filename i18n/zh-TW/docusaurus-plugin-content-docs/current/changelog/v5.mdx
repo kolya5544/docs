@@ -4,6 +4,34 @@ title: V5
 
 import '/src/css/changelog.css';
 
+## 2026-02-04
+### REST API
+- [查詢代理用戶列表](../v5/affiliate/affiliate-user-list) [更新]
+    - 新增響應字段 "tradfiTradeVol", "tradfiTradeVol30Day", "tradfiTradeVol365Day", "commissionsVol", "commissions30Day", "commissions365Day"
+- [查詢代理用戶信息](../v5/affiliate/affiliate-info) [更新]
+    - 新增響應字段 "tradfiTradeVol30Day", "tradfiTradeVol365Day", "commissions30Day", "commissions365Day"
+
+## 2026-01-28
+### REST API
+- [升級到UTA PRO](../v5/account/upgrade-unified-account) [更新]
+    - UTA 用戶升級 PRO 新增門檻限制
+
+## 2026-01-16
+### REST API
+- [獲取最大可借](../v5/new-crypto-loan/max-loan-amt) [新增]
+    - 新增接口用戶獲取質押借貸的最大可借以及剩餘可借額度
+
+## 2026-01-13
+### REST API
+- [查詢成交紀錄](../v5/order/execution) [更新]
+    - 对于`linear`,`inverse`,`option`新增請求字段 "settleCoin"
+- [查詢持倉 (實時)](../v5/position) [更新]
+    - 对于`linear`和`inverse`,新增響應字段: `breakEvenPrice`
+
+### WebSocket API
+- [持倉](../v5/websocket/private/position) [更新]
+    - 对于`linear`和`inverse`,新增響應字段: `breakEvenPrice`
+
 ## 2026-01-08
 ### REST API
 - [還款](../v5/otc/repay) [新增]
@@ -903,7 +931,7 @@ import '/src/css/changelog.css';
     - 新增查詢DCP配置的接口
 
 ### Websocket API
-- [Dcp](../v5/websocket/private/dcp) [更新]
+- [DCP](../v5/websocket/private/dcp) [更新]
     - 廢棄原本的topic名稱 `dcp`
     - 新增topic名稱 `dcp.future`, `dcp.spot`, `dcp.option`
 

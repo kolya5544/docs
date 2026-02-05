@@ -121,15 +121,16 @@ _closed status_
 * `Deactivated`&emsp;UTA: Spot tp/sl order, conditional order, OCO order are cancelled before they are triggered
 
 ### timeInForce
-* `GTC`&emsp;GoodTillCancel
-* `IOC`&emsp;ImmediateOrCancel
-* `FOK`&emsp;FillOrKill
-* <a href="https://www.bybit.com/en/help-center/article/Post-Only-Order">PostOnly</a>
-* <a href="https://www.bybit.com/en/help-center/article/Retail-Price-Improvement-RPI-Order">RPI</a>&emsp;features:<ul><li><b>Exclusive Matching</b>: Only match non-algorithmic users; no execution against orders from Open API.</li>
-<li><b>Post-Only Mechanism</b>: Act as maker orders, adding liquidity</li>
-<li><b>Lower Priority</b>: Execute after non-RPI orders at the same price level.</li>
-<li><b>Limited Access</b>: Initially for select market makers across multiple pairs.</li>
-<li><b>Order Book Updates</b>: Excluded from API but displayed on the GUI.</li></ul>
+- `GTC`&emsp;GoodTillCancel
+- `IOC`&emsp;ImmediateOrCancel
+- `FOK`&emsp;FillOrKill
+- <a href="https://www.bybit.com/en/help-center/article/Post-Only-Order">PostOnly</a>
+- [RPI](https://www.bybit.com/en/help-center/article/Retail-Price-Improvement-RPI-Order)&emsp;features:
+  - <b>Exclusive Matching</b>: Only match non-algorithmic users; no execution against orders from Open API.
+  - <b>Post-Only Mechanism</b>: Act as maker orders, adding liquidity
+  - <b>Lower Priority</b>: Execute after non-RPI orders at the same price level.
+  - <b>Limited Access</b>: Initially for select market makers across multiple pairs.
+  - <b>Order Book Updates</b>: Excluded from API but displayed on the GUI.
 
 ### createType
 * `CreateByUser`
@@ -478,6 +479,7 @@ _Options:_
 * `PLATFORM_TOKEN_MNT_LIQRETURNEDMNT`&emsp;Return MNT
 * `BORROW`&emsp;Manual loan borrow and auto loan borrow
 * `REPAY`&emsp;Manual loan repay and auto loan repay
+* `CONVERT`&emsp;Currency convert repayment
 * `BROKER_ABACCOUNT_FEE`&emsp;Borker AB fee deduction
 * `EARNING_REDEMPTION_SELL`
 * `EARNING_REDEMPTION_BUY`
@@ -487,6 +489,13 @@ _Options:_
 * `DBS_CASH_IN_TR`
 * `CUSTODY_CASH_RECOVER_TR`
 * `ALPHA_SMALL_TOKEN_REFUND`
+* `TWAP_BUDGET_AIRDROP`
+* `TWAP_BUDGET_RECALL`
+* `FLOATING_TO_FIXED_BORROW`
+* `FLOATING_TO_FIXED_REPAY`
+* `IDN_CONVERT_IN`
+* `IDN_CONVERT_OUT`
+
 
 
 ### type(contract-translog)

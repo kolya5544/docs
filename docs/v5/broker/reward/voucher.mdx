@@ -1,6 +1,6 @@
 ---
-title: Query Voucher Spec
-sidebar_label: Query Voucher Spec
+title: Get Voucher Spec
+sidebar_label: Get Voucher Spec
 sidebar_position: 1
 ---
 
@@ -17,7 +17,7 @@ POST `/v5/broker/award/info`
 |:----- |:-----|----- |
 |id |string |Voucher ID|
 |coin |string |Coin|
-|amountUnit |string |<li><code>AWARD_AMOUNT_UNIT_USD</code></li><li><code>AWARD_AMOUNT_UNIT_COIN</code></li>|
+|amountUnit |string |<ul><li><code>AWARD_AMOUNT_UNIT_USD</code></li><li><code>AWARD_AMOUNT_UNIT_COIN</code></li></ul>|
 |productLine |string |Product line|
 |subProductLine |string |Sub product line|
 |totalAmount |Object |Total amount of voucher|
@@ -47,7 +47,15 @@ Content-Length: 22
 <TabItem value="python" label="Python">
 
 ```python
-
+from pybit.unified_trading import HTTP
+session = HTTP(
+    testnet=True,
+    api_key="xxxxxxxxxxxxxxxxxx",
+    api_secret="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+)
+print(session.get_voucher_spec(
+    id="80209",
+))
 ```
 
 </TabItem>

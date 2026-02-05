@@ -548,6 +548,7 @@ sidebar_label: Error Codes
 |148040|Pledge token is error.|
 |148041|Repay order is exist.|
 |148042|Exceeds the allowed decimal precision for this currency.|
+|148047|The request collateral amount exceeds the maximum allowed. upper limit (initial limit: 300,000 USD-equivalent per repayment)|
 
 ## Crypto Loan (legacy)
 |Code |Description |
@@ -643,7 +644,7 @@ sidebar_label: Error Codes
 | 81007 |Bybit Europe is not supported create API Key|
 | 20096 |need KYC authentication|
 
-## Set api rate limit
+## Set API rate limit
 |Code |Description |
 |:----:|:-------------------------------|
 | 3500002 |Current user is not an institutional user |
@@ -706,3 +707,5 @@ sidebar_label: Error Codes
 | 35000011  | You have existing pending loan orders. Please try again later.      |
 | 34022053  | Please contact the sales to enable the manual borrowing feature.      |
 | 34022094  | This coin does not support repayment through coin exchange.      |
+| 34022106  | To use this feature, your net liability value must be below %s USD. Otherwise, please repay through spot trading or deposit funds first. (For single coin repayment)|
+| 34022107  | To use this feature, your net liability value must be below %s USD. Otherwise, please repay through spot trading or deposit funds first. (For all coin repayment)|
